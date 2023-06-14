@@ -1,0 +1,1 @@
+Lamba, Map, Filter, Reduce
