@@ -1,0 +1,88 @@
+Test cases for 4-print_square.
+====================================
+
+The module prints a square with the character #.
+
+===================================================
+The following are the usage examples;
+=====================================
+
+Importing function from the module:
+	>>> print_square = __import__('4-print_square').print_square
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+Test case 2: size = 3"
+	>>> print_square(3)
+	###
+	###
+	###
+
+Test case 3: size = 0 (edge case):
+	>>> print_square(0)
+
+Test case 4: size = -5:
+	>>> print_square(-5)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Test case 5: size = 4.5:
+	>>> print_square(4.5)
+	Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Test case 6: size = "3":
+	>>> print_square("3")
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

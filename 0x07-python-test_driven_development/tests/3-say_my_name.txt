@@ -1,0 +1,31 @@
+Test cases for 3-say_my_name module.
+====================================
+
+The module prints My name is <first name> <last name>.
+
+===================================================
+The following are the usage examples;
+=====================================
+
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
+
+Importing function from the module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("John", "Doe")
+	My name is John Doe
+
+Test case 2: Only first_name provided:
+	>>> say_my_name("Alice")
+	My name is Alice
+
+Test case 3: first_name not a string (raises TypeError)
+	>>> say_my_name(123, "Smith")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+Test case 4: last_name not a string (raises TypeError)
+	>>> say_my_name("Smith", 123)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
