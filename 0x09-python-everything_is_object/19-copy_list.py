@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def copy_list(l):
-    return l[:] #[:] slicing notation is used to create a copy of the input list l
+def copy_list(lst):  # Renamed 'l' to 'lst' for clarity
+    return lst[:]  # Used list slicing to create a copy
