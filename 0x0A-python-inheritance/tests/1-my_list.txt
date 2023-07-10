@@ -1,0 +1,43 @@
+Test cases for 1-my_list.py
+====================================
+
+The following are the usage examples;
+=====================================
+
+Import the function:
+      >>> MyList = __import__('1-my_list').MyList
+
+Empty list:
+        >>> my_list = MyList()
+        >>> my_list.print_sorted()
+        []
+
+List with a single element:
+        >>> my_list = MyList([5])
+        >>> my_list.print_sorted()
+        [5]
+
+List with multiple elements in ascending order:
+        >>> my_list = MyList([1, 2, 3, 4, 5])
+        >>> my_list.print_sorted()
+        [1, 2, 3, 4, 5]
+
+List with multiple elements in descending order:
+        >>> my_list = MyList([5, 4, 3, 2, 1])
+        >>> my_list.print_sorted()
+        [1, 2, 3, 4, 5]
+
+List with multiple elements in random order:
+        >>> my_list = MyList([3, 1, 5, 4, 2])
+        >>> my_list.print_sorted()
+        [1, 2, 3, 4, 5]
+
+List with duplicate elements:
+        >>> my_list = MyList([2, 1, 3, 2, 4, 4, 1])
+        >>> my_list.print_sorted()
+        [1, 1, 2, 2, 3, 4, 4]
+
+List with negative numbers:
+        >>> my_list = MyList([-3, -1, -5, -4, -2])
+        >>> my_list.print_sorted()
+        [-5, -4, -3, -2, -1]
