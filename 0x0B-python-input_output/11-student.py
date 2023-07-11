@@ -5,7 +5,8 @@
 class Student:
     def __init__(self, first_name, last_name, age):
         """
-        Initializes a Student instance with the provided first name, last name, and age.
+        Initializes a Student instance with the provided
+        first name, last name, and age.
 
         Args:
             first_name (str): The first name of the student.
@@ -21,7 +22,8 @@ class Student:
         Retrieves a dictionary representation of a Student instance.
 
         Args:
-            attrs (list, optional): List of attribute names to be retrieved. Defaults to None.
+            attrs (list, optional): List of attribute names to be retrieved.
+            Defaults to None.
 
         Returns:
             dict: The dictionary representation of the Student instance.
@@ -36,7 +38,8 @@ class Student:
 
     def reload_from_json(self, json):
         """
-        Replaces all attributes of the Student instance based on the provided JSON dictionary.
+        Replaces all attributes of the Student instance based on
+        the provided JSON dictionary.
 
         Args:
             json (dict): JSON dictionary containing attribute names and values.
