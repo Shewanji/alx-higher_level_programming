@@ -29,36 +29,36 @@ class RectangleTestCase(unittest.TestCase):
         """ Test that the width must be greater than 0 and an integer """
         with self.assertRaises(ValueError):
             Rectangle(width=-5, height=10)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5.5, height=10)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width="5", height=10)
 
     def test_valid_height(self):
         """ Test that the height must be greater than 0 and an integer """
         with self.assertRaises(ValueError):
             Rectangle(width=5, height=-10)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5, height=10.5)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5, height="10")
 
     def test_valid_x(self):
         """ Test that x must be non-negative and an integer """
         with self.assertRaises(ValueError):
             Rectangle(width=5, height=10, x=-2)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5, height=10, x=2.5)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5, height=10, x="2")
 
     def test_valid_y(self):
         """ Test that y must be non-negative and an integer """
         with self.assertRaises(ValueError):
             Rectangle(width=5, height=10, y=-3)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5, height=10, y=3.5)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             Rectangle(width=5, height=10, y="3")
 
     def test_area(self):
