@@ -23,7 +23,7 @@ if __name__ == '__main__':
     Construct the SQL query using format with
     the state_name as a parameter
     """
-    query = "SELECT id, name FROM states WHERE name = '{}' \
+    query = "SELECT id, name FROM states WHERE name LIKE BINARY = '{}' \
              ORDER BY id".format(argv[4])
 
     # Execute the query
