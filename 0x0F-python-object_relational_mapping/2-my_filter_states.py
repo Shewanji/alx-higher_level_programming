@@ -18,14 +18,13 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     # Get the state name from the command line arguments
-    state_name = argv[4]
 
     """
     Construct the SQL query using format with
     the state_name as a parameter
     """
     query = "SELECT id, name FROM states WHERE name = '{}' \
-             ORDER BY id".format(state_name)
+             ORDER BY id".format(argv[4])
 
     # Execute the query
     cursor.execute(query)
