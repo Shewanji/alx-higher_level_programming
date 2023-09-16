@@ -18,22 +18,22 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     # Use a prepared statement to avoid SQL injection
-    query = "SELECT cities.name FROM cities " \
+    query = "SELECT cities.id, cities.name FROM cities " \
             "JOIN states ON cities.state_id = states.id " \
-            "WHERE states.name = %s " \
+            "WHERE states.name LIKE BINARY %(state_name)s " \
             "ORDER BY cities.id"
 
     state_name = argv[4]
 
     # Execute the SQL query with a parameterized query
-    cursor.execute(query, (state_name,))
+    cursor.execute(query, {"state_name": state_name})
 
     # Fetch all the rows and display them
     results = cursor.fetchall()
 
     # Check if there are results
     if results:
-        cities = [row[0] for row in results]
+        cities = [row[1] for row in results]
         print(', '.join(cities))
 
     # Close the cursor and database connection
