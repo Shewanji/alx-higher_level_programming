@@ -32,10 +32,8 @@ if __name__ == '__main__':
     results = cursor.fetchall()
 
     # Check if there are results
-    if results:
-        cities = [row[1] for row in results]
-        print(', '.join(cities))
-
+    if results is not None:
+        print(", ".join([row[1] for row in results]))
     # Close the cursor and database connection
     cursor.close()
     db.close()
