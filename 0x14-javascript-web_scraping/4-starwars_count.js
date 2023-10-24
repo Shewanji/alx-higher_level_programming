@@ -22,7 +22,7 @@ request.get(apiUrl, (error, response, body) => {
 
     data.results.forEach((film) => {
       if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-        count++;
+        count += 1;
       }
     });
 
