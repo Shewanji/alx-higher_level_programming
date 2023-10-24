@@ -13,6 +13,8 @@ const apiUrl = process.argv[2];
 // Initialize a counter
 let count = 0;
 
+const characterId = '18';
+
 // Send a GET request to the Star Wars API to get all films
 request.get(apiUrl, (error, response, body) => {
   if (error) {
@@ -21,9 +23,11 @@ request.get(apiUrl, (error, response, body) => {
     const data = JSON.parse(body);
 
     data.results.forEach((film) => {
-      if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-        count += 1;
-      }
+      film.characters.forEach((character) => {
+        if (character.includes(characterId)) {
+          count += 1;
+        }
+      });
     });
 
     console.log(count);
