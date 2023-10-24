@@ -11,7 +11,7 @@ if (process.argv.length !== 3) {
 const apiUrl = process.argv[2];
 
 // Send a GET request to the API to fetch todos
-request.get(apiUrl, { json: true },(error, response, body) => {
+request.get(apiUrl, { json: true }, (error, response, body) => {
   if (error) {
     console.log(error);
     return;
@@ -28,4 +28,4 @@ request.get(apiUrl, { json: true },(error, response, body) => {
     }
   });
   console.log(tasksCompleted);
-});	
+});
